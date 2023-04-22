@@ -1,5 +1,6 @@
 package com.visibilidad;
 
+import com.visibilidad.business.Visibility;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

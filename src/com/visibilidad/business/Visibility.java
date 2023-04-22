@@ -1,4 +1,4 @@
-package com.visibilidad;
+package com.visibilidad.business;
 
 import com.visibilidad.model.Product;
 import com.visibilidad.model.Size;
@@ -52,7 +52,7 @@ public class Visibility {
             if(size.isBackSoon() || mapStocks.get(size.getId()) != 0) {
                 if(result.size() == 1) {
                     Size sizeStored = result.get(0);
-                    if(size.isBackSoon() != sizeStored.isBackSoon() || size.isSpecial() == sizeStored.isSpecial()) {
+                    if(size.isSpecial() != sizeStored.isSpecial()) {
                         return true;
                     }
                 } else {

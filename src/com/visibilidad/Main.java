@@ -1,5 +1,7 @@
 package com.visibilidad;
 
+import com.visibilidad.business.Visibility;
+
 public class Main {
 
     public static void main(String[] args) {
