@@ -46,17 +46,16 @@ public class Visibility {
     }
 
     private boolean isAvailabilityProductsBySpecialClothing(final List<Size> sizes) {
-        ArrayList<Size> result = new ArrayList<>();
+        boolean previousSpecial = false;
 
         for(Size size : sizes) {
             if(size.isBackSoon() || mapStocks.get(size.getId()) != 0) {
-                if(result.size() == 1) {
-                    Size sizeStored = result.get(0);
-                    if(size.isSpecial() != sizeStored.isSpecial()) {
+                if(previousSpecial) {
+                    if(!size.isSpecial()) {
                         return true;
                     }
                 } else {
-                    result.add(size);
+                    previousSpecial = size.isSpecial();
                 }
             }
         }
